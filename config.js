@@ -54,9 +54,7 @@ const popupTemplate = `
 const help = `
 # Introduction
 
-<img alt="powered by Overpass API" style="float: right" src="https://wiki.openstreetmap.org/w/images/b/b3/Powered_by_Overpass_API.png">
-
-[Overpass Ultra](https://overpass-ultra.us) is a deployment of
+This is an [OpenHistoricalMap](https://openhistoricalmap.org)-specific deployment of
 [Ultra](https://gitlab.com/trailstash/ultra) a web-application made to simplify making maps with
 [MapLibre GL JS](https://maplibre.org). It can load [OpenStreetMap](https://openstreetmap.org) data
 from the [Overpass API](https://overpass-api.de/).
@@ -126,9 +124,9 @@ export const modes = {
       title: "OHM Ultra",
       url: "https://ohm.overpass-ultra.us",
       mastodon: "https://mapstodon.space/@trailstash",
-      zoom: 16,
-      center: [-77.4515, 37.5287],
       options: {
+        zoom: 13,
+        center: [-73.9803, 40.7412],
         attributionControl: {
           customAttribution: "",
         },
