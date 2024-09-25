@@ -1,0 +1,16 @@
+pages:
+  image: node:18
+  script:
+    - apt update && apt install -y mkdocs-material
+    - npm ci
+    - npm run build
+    - npm run --prefix node_modules/@trailstash/ultra build:examples-docs
+    - npm run --prefix node_modules/@trailstash/ultra build:maplibre-examples-docs
+    - npm run --prefix node_modules/@trailstash/ultra build:docs
+    - cp -r node_modules/@trailstash/ultra/dist/docs dist/.
+    - mv dist public
+  artifacts:
+    paths:
+    - public
+  only:
+  - main

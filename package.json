@@ -1,0 +1,25 @@
+{
+  "name": "@trailstash/overpass-ultra",
+  "version": "1.0.0",
+  "description": "Ultra config for overpass-ultra.us",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "ultra build",
+    "start": "ultra serve",
+    "build:pages": "mkdir -p public && cp -Lr static/* public/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/trailstash/overpass-ultra.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/trailstash/overpass-ultra/issues"
+  },
+  "homepage": "https://gitlab.com/trailstash/overpass-ultra#readme",
+  "dependencies": {
+    "@trailstash/ultra": "^3.1.2"
+  }
+}
