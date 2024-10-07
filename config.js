@@ -117,13 +117,10 @@ export const modes = {
   ide: {
     query,
     help,
-    title: "OHM Ultra",
-    icon: "/logo.png",
     settings: {
       ...settings,
       title: "OHM Ultra",
       url: "https://ohm.overpass-ultra.us",
-      mastodon: "https://mapstodon.space/@trailstash",
       options: {
         zoom: 13,
         center: [-73.9803, 40.7412],
