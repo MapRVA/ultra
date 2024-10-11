@@ -20,6 +20,6 @@
   },
   "homepage": "https://gitlab.com/trailstash/overpass-ultra#readme",
   "dependencies": {
-    "@trailstash/ultra": "^3.3.4"
+    "@trailstash/ultra": "^3.4.0"
   }
 }
