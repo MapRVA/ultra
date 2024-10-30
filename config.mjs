@@ -1,4 +1,5 @@
-const server = "https://overpass-api.openhistoricalmap.org/api/";
+import overpass from "@trailstash/ultra/lib/queryProviders/overpass.js";
+
 const mapStyle = "https://www.openhistoricalmap.org/map-styles/main/main.json";
 const query = `/*
 This is an example Overpass query.
@@ -49,7 +50,6 @@ const popupTemplate = `
     <a href="geo://{{coordinates[1]}},{{coordinates[0]}}">{{coordinates[1] | round: 6 }} / {{coordinates[0] | round: 6 }}</a> <small>(lat/lon)</small>
   {%- endif %}
 `;
-
 
 const help = `
 # Introduction
@@ -105,18 +105,29 @@ The [source code](https://gitlab.com/trailstash/ultra) of this application is re
 [MIT license](https://gitlab.com/trailstash/overpass-ultra/-/blob/master/LICENSE).
 `;
 
-const settings = {
-  type: "overpass",
+const ohmOverpass = {
+  ...overpass,
+  source: async function (query, controller, { server }) {
+    if (!server) {
+      server = "https://overpass-api.openhistoricalmap.org/api";
+    }
+    return overpass.source(query, controller, { server });
+  },
   popupTemplate,
+};
+
+const settings = {
+  type: "ohmOverpass",
   mapStyle,
-  server,
-}
+  queryProviders: { ohmOverpass },
+};
 
 export const defaultMode = "ide";
 export const modes = {
   ide: {
     query,
     help,
+    styles: [],
     settings: {
       ...settings,
       title: "OHM Ultra",
@@ -141,7 +152,7 @@ export const modes = {
       options: {
         attributionControl: {
           compact: true,
-          customAttribution: `<a href=".">Overpass Ultra</a>
+          customAttribution: `<a href=".">Ultra</a>
             (<a href="javascript:new URLSearchParams(window.location.hash.slice(1));params.delete("map");window.location=new URL("#"+params.toString(),window.location).toString();">View Query</a>)`,
         },
       },
