@@ -56,7 +56,7 @@ const help = `
 
 This is an [OpenHistoricalMap](https://openhistoricalmap.org)-specific deployment of
 [Ultra](https://gitlab.com/trailstash/ultra) a web-application made to simplify making maps with
-[MapLibre GL JS](https://maplibre.org). It can load [OpenStreetMap](https://openstreetmap.org) data
+[MapLibre GL JS](https://maplibre.org). It can load [OpenHistoricalMap](https://openhistoricalmap.org) data
 from the [Overpass API](https://overpass-api.de/).
 
 ## Documentation
@@ -111,7 +111,9 @@ const ohmOverpass = {
     if (!server) {
       server = "https://overpass-api.openhistoricalmap.org/api";
     }
-    return overpass.source(query, controller, { server });
+    const src = await overpass.source(query, controller, { server });
+    delete src.attribution;
+    return src;
   },
   popupTemplate,
 };
