@@ -65,7 +65,7 @@ The documentation for Ultra is available at <a target="_blank" href="https://ove
 
 ## Overpass Queries
 
-The Overpass API allows you to query for OSM data by your own search criteria. For this purpose, it
+The Overpass API allows you to query for OHM data by your own search criteria. For this purpose, it
 has a specifically crafted query language: [Overpass
 QL](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL)
 
