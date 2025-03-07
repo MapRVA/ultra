@@ -1,4 +1,5 @@
 import overpass from "@trailstash/ultra/lib/queryProviders/overpass.js";
+import sparql from "@trailstash/ultra/lib/queryProviders/sparql.js";
 
 const mapStyle = "https://www.openhistoricalmap.org/map-styles/main/main.json";
 const query = `/*
@@ -105,23 +106,24 @@ The [source code](https://gitlab.com/trailstash/ultra) of this application is re
 [MIT license](https://gitlab.com/trailstash/overpass-ultra/-/blob/master/LICENSE).
 `;
 
-const ohmOverpass = {
-  ...overpass,
-  source: async function (query, controller, { server }) {
-    if (!server) {
-      server = "https://overpass-api.openhistoricalmap.org/api";
-    }
-    const src = await overpass.source(query, controller, { server });
-    delete src.attribution;
-    return src;
-  },
-  popupTemplate,
-};
-
 const settings = {
-  type: "ohmOverpass",
+  type: "overpass",
   mapStyle,
-  queryProviders: { ohmOverpass },
+  queryProviders: {
+    overpass: {
+      ...overpass,
+      source: async function (query, controller, { server }) {
+        if (!server) {
+          server = "https://overpass-api.openhistoricalmap.org/api";
+        }
+        const src = await overpass.source(query, controller, { server });
+        delete src.attribution;
+        return src;
+      },
+      popupTemplate,
+    },
+    sparql,
+  },
 };
 
 export const defaultMode = "ide";
