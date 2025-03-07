@@ -2,7 +2,7 @@ pages:
   image: node:18
   script:
     - apt update && apt install -y mkdocs-material
-    - npm ci
+    - npm i
     - npm run build
     - npm run --prefix node_modules/@trailstash/ultra build:examples-docs
     - npm run --prefix node_modules/@trailstash/ultra build:maplibre-examples-docs
