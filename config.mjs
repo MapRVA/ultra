@@ -131,7 +131,33 @@ export const modes = {
   ide: {
     query,
     help,
-    styles: [],
+    styles: [
+      [
+        "Historical",
+        mapStyle,
+        '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
+      ],
+      [
+        "Rail",
+        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/rail/rail.json",
+        '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
+      ],
+      [
+        "Woodblock",
+        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json",
+        '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
+      ],
+      [
+        "Japanese Scroll",
+        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/japanese_scroll/ohm-japanese-scroll-map.json",
+        '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
+      ],
+      [
+        "OSM OpenMapTiles",
+        "https://styles.trailsta.sh/openmaptiles-osm.json",
+        '<a href="https://openfreemap.org">OpenFreeMap</a>',
+      ],
+    ],
     settings: {
       ...settings,
       title: "OHM Ultra",
