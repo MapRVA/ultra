@@ -133,23 +133,23 @@ export const modes = {
     help,
     styles: [
       [
-        "Historical",
+        "Historic",
         mapStyle,
         '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
       ],
       [
         "Rail",
-        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/rail/rail.json",
+        "https://www.openhistoricalmap.org/map-styles/rail/rail.json",
         '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
       ],
       [
         "Woodblock",
-        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/woodblock/woodblock.json",
+        "https://www.openhistoricalmap.org/map-styles/woodblock/woodblock.json",
         '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
       ],
       [
         "Japanese Scroll",
-        "https://raw.githubusercontent.com/OpenHistoricalMap/map-styles/staging/japanese_scroll/ohm-japanese-scroll-map.json",
+        "https://www.openhistoricalmap.org/map-styles/japanese_scroll/ohm-japanese-scroll-map.json",
         '<a href="https://openhistoricalmap.org">OpenHistoricalMap</a>',
       ],
       [
