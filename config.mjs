@@ -114,6 +114,7 @@ export const modes = {
       title: "MapRVA Ultra",
       url: "https://ultra.maprva.org",
       options: {
+        hash: "m",
         attributionControl: {
           customAttribution: "",
         },
