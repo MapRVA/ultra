@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 22
       - name: Install mkdocs
-        run: apt install -y mkdocs-material
+        run: sudo apt install -y mkdocs-material
       - name: Install build deps
         run: npm i
       - name: Build
