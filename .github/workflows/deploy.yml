@@ -29,17 +29,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install mkdocs
-        run: sudo apt install -y mkdocs-material
       - name: Install build deps
         run: npm i
       - name: Build
-        run: |
-          npm run build
-          npm run --prefix node_modules/@trailstash/ultra build:examples-docs
-          npm run --prefix node_modules/@trailstash/ultra build:maplibre-examples-docs
-          npm run --prefix node_modules/@trailstash/ultra build:docs
-          cp -r node_modules/@trailstash/ultra/dist/docs dist/.
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
