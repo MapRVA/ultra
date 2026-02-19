@@ -160,9 +160,9 @@ export const modes = {
   ide: {
     query,
     styles,
+    help,
     settings: {
       ...settings,
-      help,
       title: "MapRVA Ultra",
       url: "https://ultra.maprva.org",
       options: {
