@@ -18,7 +18,7 @@ out geom;`;
 
 const help = `# Introduction
 
-This is a custom deploy of Ultra for MapRVA which uses `overpass.maprva.org` by default.
+This is a custom deploy of Ultra for MapRVA which uses overpass.maprva.org/api as the default overpass server.
 
 Ultra (née Overpass Ultra) is a web-application made to simplify making maps with [MapLibre GL
 JS](https://maplibre.org) with data from various file/query types such as Overpass, GeoJSON, GPX, and more.
