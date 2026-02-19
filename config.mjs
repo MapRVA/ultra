@@ -16,6 +16,57 @@ way[highway=steps];
 );
 out geom;`;
 
+const help = `# Introduction
+
+This is a custom deploy of Ultra for MapRVA which uses `overpass.maprva.org` by default.
+
+Ultra (née Overpass Ultra) is a web-application made to simplify making maps with [MapLibre GL
+JS](https://maplibre.org) with data from various file/query types such as Overpass, GeoJSON, GPX, and more.
+
+## Documentation
+
+Full documentation for Ultra is available at https://overpass-ultra.us/docs/
+
+## Configuration
+
+Various aspects of Ultra, such as styling, can be
+configured via [YAML front-matter](https://overpass-ultra.us/docs/yaml).
+
+## Styling
+
+Ultra supports styling using an extended version of the the
+[MapLibre Style Spec](https://maplibre.org/maplibre-style-spec/).
+
+See the [Styling](https://overpass-ultra.us/docs/style) section for more information.
+
+## Overpass Queries
+
+The Overpass API allows you to query for OSM data by your own search criteria. For this purpose, it
+has a specifically crafted query language: [Overpass
+QL](https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL)
+
+In addition to regular Overpass API queries one can use \`{{bbox}}\` to specify the bounding box
+coordinates of the current map view.
+
+## About
+
+Ultra is built by Daniel Schep.
+
+You can contact me on [Mastodon](https://mapstodon.space/@trailstash).
+
+## Feedback, Bug Reports, Feature Requests
+
+While Ultra has been in development for a while, it should still be considered
+experimental.
+
+If you would like to report a bug or provide other feedback, please do so in the project's
+[Issue Tracker](https://gitlab.com/trailstash/ultra/-/issues).
+
+## Source Code</h4>
+
+The [source code](https://gitlab.com/trailstash/ultra) of this application is released under the
+[MIT license](https://gitlab.com/trailstash/ultra/-/blob/main/LICENSE).
+```
 
 const customAll = {
   ...all,
@@ -111,6 +162,7 @@ export const modes = {
     styles,
     settings: {
       ...settings,
+      help,
       title: "MapRVA Ultra",
       url: "https://ultra.maprva.org",
       options: {
