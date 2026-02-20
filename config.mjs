@@ -88,6 +88,7 @@ const settings = {
     auto: new AutoProvider(customAll),
     ...customAll,
   },
+  icon: "/maprva-ultra.png",
 };
 
 const omtAttribution = '<a target="_blank" href="https://openmaptiles.org">OpenMapTiles</a> (Tiles by <a target="_blank" href="https://tiles.openstreetmap.us/">OSM US</a>)';

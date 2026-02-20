@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "ultra build",
-    "start": "ultra serve",
-    "build:pages": "mkdir -p public && cp -Lr static/* public/."
+    "build": "ultra build && cp maprva-ultra.png dist/.",
+    "start": "ultra serve"
   },
   "repository": {
     "type": "git",
