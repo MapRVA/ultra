@@ -66,7 +66,7 @@ If you would like to report a bug or provide other feedback, please do so in the
 
 The [source code](https://gitlab.com/trailstash/ultra) of this application is released under the
 [MIT license](https://gitlab.com/trailstash/ultra/-/blob/main/LICENSE).
-```
+`;
 
 const customAll = {
   ...all,
